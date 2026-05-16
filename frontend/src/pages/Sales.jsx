@@ -325,7 +325,7 @@ const Sales = () => {
                     <td style={{ fontWeight: 700 }}>₹{Number(s.total).toFixed(2)}</td>
                     <td>
                       <a
-                        href={`http://localhost:5000/api/sales/${s.id}/pdf?token=${localStorage.getItem('token')}`}
+                        href={`${import.meta.env.VITE_API_URL || 'http://localhost:5000/api'}/sales/${s.id}/pdf?token=${localStorage.getItem('token')}`}
                         target="_blank"
                         rel="noreferrer"
                         style={{ color: 'var(--primary-color)', display: 'flex', alignItems: 'center', gap: '0.25rem', fontSize: '0.85rem', textDecoration: 'none' }}

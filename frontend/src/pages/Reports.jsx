@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { FileText, Download, Printer, TrendingUp, ShoppingCart, BarChart2, AlertTriangle } from 'lucide-react';
 import api from '../api/axios';
 
-const BASE = 'http://localhost:5000/api';
+const BASE = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 const Reports = () => {
   const today = new Date().toISOString().split('T')[0];
